@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Wikipedia Viewer</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!-- my custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- so I can use font-awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" -->
+
+    <!-- google font I'm using for quotes -->
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+    <div class="container-flex">
+
+        <!-- at start a single row -->
+        <div class="row h-75">
+            <!-- space to the left of center that will be gray -->
+            <div class="col-sm-3"></div>
+            <!--- end space to the left of center that will be gray -->
+
+            <!-- this div will hold the actual search box -->
+            <div class="col-sm-6 my-auto h-50 ">
+                <div class="card w-75 h-100 mx-auto card card-outline-warning text-center mt-3">
+                    <div class="gray-background h-100 mx-3">
+
+                        <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank"><button class="btn btn-warning my-3" type="button">Get a random wikipedia article</button></a>
+
+                        <p id="or">OR</p>
+
+                        <form id="search" class="form-inline d-block">
+                            <div class="input-group m-3">
+                                <input type="text" class="form-control form-control-info" id="searchText" placeholder="Search Wikipedia for...">
+                                <span class="input-group-btn">
+                                        <button class="btn btn-warning" type="button"><i class="fa fa-search" id="searchWiki" onclick="searchWiki()"></i></button>
+                                    </span>
+                            </div>
+                            <!-- end input-group div -->
+                        </form>
+                    </div>
+                    <!-- end gray-background div -->
+                </div>
+                <!-- end card div -->
+            </div>
+            <!-- end col-sm-6 div>
+
+            <!-- space to the right of center that will be gray -->
+            <div class="col-sm-3"></div>
+            <!--- end space to the left of center that will be gray -->
+
+        </div>
+        <!-- row -->
+
+        <!-- new row where search results will be posted -->
+        <div class="row">
+            <div class="col-12" id="searchResults">
+
+            </div>
+            <!-- end col for search results -->
+        </div>
+        <!-- end row for search results -->
+
+    </div>
+    <!-- container -->
+
+    <!-- Scripts -->
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <!-- Moustache so I can use templates -->
+
+    <!-- My custom script -->
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>
